@@ -178,8 +178,8 @@ st.markdown(CSS, unsafe_allow_html=True)
 # Datos de contexto
 # -----------------------------
 # Cuotas orientativas globales. Se usan como contexto visual; deben citarse en el informe con la fuente real elegida.
-ANDROID_SHARE = 72.0
-IOS_SHARE = 28.0
+ANDROID_SHARE = 72.07
+IOS_SHARE = 27.52
 CR2 = ANDROID_SHARE + IOS_SHARE
 HHI = ANDROID_SHARE**2 + IOS_SHARE**2
 
@@ -261,9 +261,9 @@ def bar_chart(indice_cambio, lockin):
 # -----------------------------
 st.markdown("""
 <div class="hero">
-  <h1 style="margin:0 0 .45rem 0;">📱 Simulador simple: lock-in en el duopolio Android–iOS</h1>
+  <h1 style="margin:0 0 .45rem 0;">📱 Simulador: Decisión del consumidor en el duopolio Android–iOS</h1>
   <p class="muted" style="font-size:1.02rem;margin-bottom:.75rem;">
-  Herramienta didáctica para complementar el trabajo de Microeconomía II. Su objetivo no es predecir el mercado real,
+  Simulación para complementar el trabajo de Microeconomía II. Su objetivo no es predecir el mercado real,
   sino visualizar por qué los costes de cambio y los efectos de red pueden mantener estable un duopolio digital.
   </p>
   <span class="badge">Duopolio</span>
@@ -284,7 +284,7 @@ with col2:
     st.markdown(f'<div class="kpi"><div class="kpi-title">HHI orientativo</div><div class="kpi-value">{HHI:.0f}</div><div class="kpi-note">Un HHI superior a 2.500 suele indicar alta concentración.</div></div>', unsafe_allow_html=True)
 with col3:
     st.markdown('<div class="kpi"><div class="kpi-title">Idea clave</div><div class="kpi-value">2</div><div class="kpi-note">Dos ecosistemas dominantes: Android y iOS.</div></div>', unsafe_allow_html=True)
-st.caption("Nota: cuotas orientativas usadas como referencia visual: Android 72% e iOS 28%. En el informe deben actualizarse y citarse con la fuente concreta utilizada, por ejemplo StatCounter u otro informe de mercado.")
+st.caption("Nota: cuotas orientativas usadas como referencia visual: Android 72.07% e iOS 27.52%.")
 st.markdown('<div class="soft" style="margin-top:.75rem;"><b>Cómo leer el HHI:</b> el índice Herfindahl-Hirschman mide la concentración del mercado sumando los cuadrados de las cuotas de mercado. Un HHI superior a 2.500 suele considerarse propio de un mercado altamente concentrado. Aquí el valor es muy elevado porque el mercado está prácticamente repartido entre dos plataformas.</div>', unsafe_allow_html=True)
 st.markdown('</div>', unsafe_allow_html=True)
 
@@ -362,9 +362,9 @@ with st.expander("📘 Cómo funciona el modelo usado", expanded=False):
     - \(C\) = costes de cambio.
     - \(N\) = efectos de red y ecosistema.
 
-    Después, esa utilidad se transforma en un índice conceptual entre 0% y 100% mediante una función logística. No debe interpretarse como una probabilidad empírica real, sino como una forma visual de representar la tendencia al cambio.
+    Después, esa utilidad se transforma en un índice conceptual entre 0% y 100%. 
 
-    **Importante:** los pesos son arbitrarios y didácticos. No pretenden medir exactamente la realidad; solo representan una idea microeconómica: el atractivo de una alternativa puede incentivar el cambio, pero los costes de cambio y los efectos de red pueden frenarlo.
+    **Importante:** los pesos son genéricos y didácticos. No pretenden medir exactamente la realidad; solo representan una idea microeconómica: el atractivo de una alternativa puede incentivar el cambio, pero los costes de cambio y los efectos de red pueden frenarlo.
     """)
 
 with st.expander("⚠️ Límites del simulador", expanded=False):
@@ -373,18 +373,17 @@ with st.expander("⚠️ Límites del simulador", expanded=False):
 
     Sus principales límites son:
 
-    - No usa microdatos reales de consumidores.
-    - No estima elasticidades reales de demanda.
+    - No usa datos reales de consumidores.
     - No distingue por países, renta, edad o segmentos de consumidores.
     - No modeliza decisiones estratégicas completas de Apple y Google.
 
-    Por tanto, debe usarse como complemento del informe, no como prueba empírica definitiva.
+    Por tanto, debe usarse como complemento del trabajo escrito, no como prueba empírica definitiva.
     """)
 
 with st.expander("🤖 Uso de IA en esta herramienta", expanded=False):
     st.markdown("""
     La IA se ha utilizado como apoyo para estructurar el modelo, simplificar la explicación económica y generar una interfaz visual clara.
-    La función del simulador es didáctica: ayudar a comunicar de forma intuitiva cómo los *switching costs* y los efectos de red refuerzan la estabilidad del duopolio Android-iOS.
+    La función del simulador es didáctica: ayudar a comunicar de forma intuitiva cómo los costes de cambio y los efectos de red refuerzan la estabilidad del duopolio Android-iOS.
     """)
 st.markdown('</div>', unsafe_allow_html=True)
 
@@ -393,10 +392,10 @@ st.markdown('<div class="card">', unsafe_allow_html=True)
 st.subheader("3) Objetivo del simulador")
 st.markdown(f"""
 <div class="warning">
-El objetivo de este simulador es complementar el trabajo escrito mediante una representación visual y sencilla del lock-in en el duopolio Android-iOS. La herramienta permite observar cómo el atractivo de una plataforma rival puede verse limitado por los costes de cambio y los efectos de red. Por tanto, no pretende predecir el mercado real, sino ayudar a explicar por qué este duopolio puede mantenerse en el tiempo: la competencia existe, pero está condicionada por la dependencia de los usuarios respecto a sus ecosistemas digitales.
+El objetivo de este simulador es complementar el trabajo escrito mediante una representación visual y sencilla del lock-in o fidelización en el duopolio Android-iOS. La herramienta permite observar cómo el atractivo de una plataforma rival puede verse limitado por los costes de cambio y los efectos de red. Por tanto, no pretende predecir el mercado real, sino ayudar a explicar por qué este duopolio puede mantenerse en el tiempo: la competencia existe, pero está condicionada por la dependencia de los usuarios respecto a sus ecosistemas digitales.
 </div>
 """, unsafe_allow_html=True)
 st.markdown('</div>', unsafe_allow_html=True)
 
 # Pie
-st.caption("Simulador didáctico para trabajo de Microeconomía II. Ejecutar con: streamlit run simulador_ios_android_final.py")
+st.caption("Simulador didáctico para trabajo de Microeconomía II")
