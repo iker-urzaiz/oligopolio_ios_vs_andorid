@@ -283,7 +283,7 @@ with col1:
 with col2:
     st.markdown(f'<div class="kpi"><div class="kpi-title">HHI orientativo</div><div class="kpi-value">{HHI:.0f}</div><div class="kpi-note">Un HHI superior a 2.500 suele indicar alta concentración.</div></div>', unsafe_allow_html=True)
 with col3:
-    st.markdown('<div class="kpi"><div class="kpi-title">Idea clave</div><div class="kpi-value">2</div><div class="kpi-note">Dos ecosistemas dominantes: Android y iOS.</div></div>', unsafe_allow_html=True)
+    st.markdown('<div class="kpi"><div class="kpi-title">Mercado dividido en: </div><div class="kpi-value">2</div><div class="kpi-note">Dos ecosistemas dominantes: Android y iOS.</div></div>', unsafe_allow_html=True)
 st.caption("Nota: cuotas orientativas usadas como referencia visual: Android 72.07% e iOS 27.52%.")
 st.markdown('<div class="soft" style="margin-top:.75rem;"><b>Cómo leer el HHI:</b> el índice Herfindahl-Hirschman mide la concentración del mercado sumando los cuadrados de las cuotas de mercado. Un HHI superior a 2.500 suele considerarse propio de un mercado altamente concentrado. Aquí el valor es muy elevado porque el mercado está prácticamente repartido entre dos plataformas.</div>', unsafe_allow_html=True)
 st.markdown('</div>', unsafe_allow_html=True)
